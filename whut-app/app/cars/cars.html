@@ -1,0 +1,24 @@
+<div class="inner cover">
+  <h1 class="cover-heading">Cars</h1>
+  <p class="lead">Search for cars. Enter a year, make and model.</p>
+  <p class="lead">
+
+    <div class="input-group">
+        <input type="text" class="form-control input-lg" 
+          whut-to-search context="cars"
+          query="searchValue"
+          results="searchResults"
+          hints="searchHints"
+          placeholder="2016 Tesla Model X"
+          ng-model="searchValue">
+        <span class="input-group-btn">
+            <button ng-click="searchNow" class="btn btn-lg btn-default" title="Search"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+    </div>
+    <div>
+      <ul>
+        <li ng-repeat="result in searchResults track by $index">{{result}}</li>
+      </ul>
+    </div>
+  </p>
+</div>
